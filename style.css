@@ -8,11 +8,15 @@
 }
 
 body {
-    background-color: aqua;
+    background: #159957;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #159957, #155799);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #159957, #155799);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 main {
-    background-color: aqua;
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -25,15 +29,20 @@ main {
     min-width: 250px;
     border: none;
     border-radius: 1rem;
-    background-color: aliceblue;
     padding: 1vh 1vw;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    border: 1px solid rgba(255, 255, 255, 0.58);
 }
 
 .text-box {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid grey;
+    border: 1px solid;
     border-radius: 1rem;
     padding: 2vh 1vw;
     font-size: clamp(1rem, 2.2vw, 1.6rem);
@@ -52,24 +61,27 @@ main {
     align-items: center;
     justify-content: center;
     justify-self: center;
-    width: 80%;
+    width: 50%;
     height: 10%;
     font-size: 1.3rem;
+    letter-spacing: 2px;
     padding: 0.2rem;
     margin: 1.5vh 0;
     border: none;
     border-radius: 0.2rem;
-    background-color: blue;
-    color: white;
-}
-
-.reset-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(30px);
     cursor: pointer;
 }
 
-.main-reset{
+.reset-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.main-reset {
     position: relative;
-    left: 9.5%;
+    left: 24%;
 }
 
 .time-select {
@@ -78,6 +90,7 @@ main {
     justify-content: space-between;
     padding: 0 1vw;
     font-size: 1.3rem;
+
 }
 
 label {
@@ -89,16 +102,21 @@ label {
     height: 25px;
     margin: 10px 5px;
     font-size: 1rem;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    border: 1px solid rgba(255, 255, 255, 0.30);
 }
 
 .incorrect {
-    color: red;
+    color: #d00000;
     background-color: rgb(239, 35, 60, 0.2);
 
 }
 
 .correct {
-    color: gray;
+    color: #495057;
 }
 
 .current {
@@ -107,25 +125,17 @@ label {
 
 .overlay {
     position: absolute;
-    /* Sit on top of the page content */
     display: flex;
-    /* Hidden by default */
     align-items: center;
     justify-content: center;
     width: 100%;
-    /* Full width (cover the whole page) */
     height: 100%;
-    /* Full height (cover the whole page) */
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    /* Black background with opacity */
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 2;
-    /* Specify a stack order in case you're using a different order for other elements */
-    cursor: pointer;
-    /* Add a pointer on hover */
 }
 
 #result {
@@ -133,12 +143,17 @@ label {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: aliceblue;
     height: 50%;
-    width: 50%;
+    width: 40%;
     border: none;
     border-radius: 0.5rem;
     padding: 2vh 1vw;
+    background: rgba(255, 255, 255, 0.32);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.6px);
+    -webkit-backdrop-filter: blur(8.6px);
+    border: 1px solid rgba(255, 255, 255, 0.78);
 }
 
 #result h2 {
@@ -155,6 +170,6 @@ label {
     font-size: clamp(1rem, 2vw, 1.3rem);
 }
 
-.hide{
+.hide {
     display: none;
 }
