@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: aqua;
+}
+
+main {
+    background-color: aqua;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    width: 50vw;
+    min-width: 250px;
+    border: none;
+    border-radius: 1rem;
+    background-color: aliceblue;
+    padding: 1vh 1vw;
+}
+
+.text-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid grey;
+    border-radius: 1rem;
+    padding: 2vh 1vw;
+    font-size: clamp(1rem, 2.2vw, 1.6rem);
+}
+
+.text-input {
+    border: none;
+    background-color: antiquewhite;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+}
+
+.reset-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    width: 80%;
+    height: 10%;
+    font-size: 1.3rem;
+    padding: 0.2rem;
+    margin: 1.5vh 0;
+    border: none;
+    border-radius: 0.2rem;
+    background-color: blue;
+    color: white;
+}
+
+.reset-button:hover {
+    cursor: pointer;
+}
+
+.main-reset{
+    position: relative;
+    left: 9.5%;
+}
+
+.time-select {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1vw;
+    font-size: 1.3rem;
+}
+
+label {
+    display: flex;
+    align-items: center;
+}
+
+#time-dropdown {
+    height: 25px;
+    margin: 10px 5px;
+    font-size: 1rem;
+}
+
+.incorrect {
+    color: red;
+    background-color: rgb(239, 35, 60, 0.2);
+
+}
+
+.correct {
+    color: gray;
+}
+
+.current {
+    text-decoration: underline;
+}
+
+.overlay {
+    position: absolute;
+    /* Sit on top of the page content */
+    display: flex;
+    /* Hidden by default */
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    /* Full width (cover the whole page) */
+    height: 100%;
+    /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Black background with opacity */
+    z-index: 2;
+    /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer;
+    /* Add a pointer on hover */
+}
+
+#result {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+    height: 50%;
+    width: 50%;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 2vh 1vw;
+}
+
+#result h2 {
+    font-size: clamp(1rem, 2.5vw, 2rem);
+}
+
+#result #wpm {
+    font-size: clamp(1.5rem, 4vw, 5rem);
+    font-weight: 400;
+
+}
+
+#result p {
+    font-size: clamp(1rem, 2vw, 1.3rem);
+}
+
+.hide{
+    display: none;
+}

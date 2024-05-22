@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Test</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <main>
+        <div class="card">
+            <div class="time-select">
+                <label for="time">Time:
+                    <select name="time" id="time-dropdown">
+                        <option value="15" selected>15 sec</option>
+                        <option value="30" >30 sec</option>
+                        <option value="60">60 sec</option>
+                    </select>
+                </label>
+                <input type="text" class="text-input">
+                <p id="countdown"><span>30</span> <i class="fa-regular fa-clock"></i></p>
+            </div>
+
+            <div class="text-box">
+                <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam commodi tenetur cumque
+                    accusantium iste maxime itaque quis inventore cupiditate earum sapiente soluta, perspiciatis, fugiat
+                    molestiae. Explicabo minima quas excepturi non temporibus itaque vel corrupti, laudantium error
+                    consequatur. Possimus magnam sequi quidem, neque ea veniam! Porro tempora nobis, dicta sint corrupti
+                    perferendis qui suscipit molestiae quo optio deserunt, aliquam, similique placeat?
+                </p>
+            </div>
+            <button class="reset-button main-reset" onclick="reset()">RESET</button>
+        </div>
+    </main>
+    <div class="overlay hide">
+        <div id="result">
+            <h2>Typing Speed Test Result</h2>
+            <p id="wpm">0</p>
+            <p>WPM</p>
+            <div class="details">
+                <p>Acurracy <span id="accuracy">0</span>%</p>
+                <p>Mistakes <span id="mistakes">0</span></p>
+                <p>Raw WPM <span id="raw-wpm">0</span></p>
+            </div>
+            <button class="reset-button" onclick="reset()">Retry</button>
+        </div>
+    </div>
+
+    <script src="paragraphs.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
