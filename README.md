@@ -15,4 +15,4 @@ A simple and intrusive speed typing test to measure your typing speed in Words P
 
 ---
 
-Improve your typing speed with this fun and interactive test!
+Improve your typing speed with this fun and interactive test [now](https://sarcastic-soul.github.io/Typing-Test/)!
